@@ -1,0 +1,109 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ImgExtractor</name>
+    </assembly>
+    <members>
+        <member name="T:ImgExtractor.HtmlImageExtractor">
+            <summary>
+            Class for extraction images from html.
+            </summary>
+        </member>
+        <member name="P:ImgExtractor.HtmlImageExtractor.RandomName">
+            <summary>
+            If <see langword="true"/> file name will be generated randomly.
+            </summary>
+        </member>
+        <member name="M:ImgExtractor.HtmlImageExtractor.AddDownloader(ImgExtractor.IDownloader)">
+            <summary>
+            Add instance of <see cref="T:ImgExtractor.IDownloader"/> to download images.
+            </summary>
+            <param name="downloader"></param>
+        </member>
+        <member name="M:ImgExtractor.HtmlImageExtractor.#ctor(ImgExtractor.IImageUploader)">
+            <summary>
+            Class for extraction images from html.
+            </summary>
+            <param name="imageUploader">Implementation of <see cref="T:ImgExtractor.IImageUploader" /> to save extracted files.</param>
+        </member>
+        <member name="M:ImgExtractor.HtmlImageExtractor.ExtractImagesFromHtmlAsync(System.String)">
+            <summary>
+            Extracts images from html asynchronously.
+            </summary>
+            <param name="html">Html code to extract images from it.</param>
+            <returns>Html with replaced images sources.</returns>
+        </member>
+        <member name="M:ImgExtractor.HtmlImageExtractor.ExtractImagesFromHtml(System.String)">
+            <summary>
+            Extracts images from html.
+            </summary>
+            <param name="html">Html code to extract images from it.</param>
+            <returns>Html with replaced images sources.</returns>
+        </member>
+        <member name="M:ImgExtractor.HtmlImageExtractorBuilder.UseRandomName(System.Boolean)">
+            <summary>
+            If <paramref name="useRandomName"/> is true, random name will be generated for file.
+            </summary>
+        </member>
+        <member name="M:ImgExtractor.HtmlImageExtractorBuilder.AddDownloader(ImgExtractor.IDownloader)">
+            <summary>
+            Add instance of <see cref="T:ImgExtractor.IDownloader"/> to <see cref="T:ImgExtractor.HtmlImageExtractor" />
+            </summary>
+            <param name="downloader"></param>
+        </member>
+        <member name="M:ImgExtractor.HtmlImageExtractorExtension.AddHtmlImageExtractor(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Register <see cref="T:ImgExtractor.HtmlImageExtractor"/> without <see cref="T:ImgExtractor.IImageUploader"/> in <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>.
+            </summary>
+        </member>
+        <member name="M:ImgExtractor.HtmlImageExtractorExtension.AddHtmlImageExtractor(Microsoft.Extensions.DependencyInjection.IServiceCollection,ImgExtractor.IImageUploader)">
+            <summary>
+            Register <see cref="T:ImgExtractor.HtmlImageExtractor"/>, which uses particular <see cref="T:ImgExtractor.IImageUploader"/> in <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>
+            </summary>
+            <param name="services"></param>
+            <param name="imageUploader">Implementation of <see cref="T:ImgExtractor.IImageUploader"/> to save extracted files.</param>
+        </member>
+        <member name="M:ImgExtractor.HtmlImageExtractorExtension.AddHtmlImageExtractor``1(Microsoft.Extensions.DependencyInjection.IServiceCollection)">
+            <summary>
+            Register <see cref="T:ImgExtractor.HtmlImageExtractor"/>, which uses <see cref="T:ImgExtractor.IImageUploader"/> from <see cref="T:Microsoft.Extensions.DependencyInjection.IServiceCollection"/>
+            </summary>
+            <typeparamref name="T">Type of <see cref="T:ImgExtractor.IImageUploader"/></typeparamref>
+        </member>
+        <member name="T:ImgExtractor.IImageUploader">
+            <summary>
+            Uploads image to storage.
+            </summary>
+        </member>
+        <member name="M:ImgExtractor.IImageUploader.UploadImage(System.String,System.Byte[])">
+            <summary>
+            Uploads image.
+            </summary>
+            <param name="name">New filename for file.</param>
+            <param name="data">Content of file.</param>
+            <returns>Url of saved file</returns>
+        </member>
+        <member name="M:ImgExtractor.IImageUploader.UploadImageAsync(System.String,System.Byte[])">
+            <summary>
+            Uploads image asynchronously.
+            </summary>
+            <param name="name">New filename for file.</param>
+            <param name="data">Content of file.</param>
+            <returns>Url of saved file</returns>
+        </member>
+        <member name="T:ImgExtractor.ImageExtractionResult">
+            <summary>
+            Representation of html with reuploaded images.
+            </summary>
+        </member>
+        <member name="P:ImgExtractor.ImageExtractionResult.Html">
+            <summary>
+            Html, in which image sources was replaced to reuploaded images urls.
+            </summary>
+        </member>
+        <member name="P:ImgExtractor.ImageExtractionResult.Mapping">
+            <summary>
+            Mapping of old image sources to new sources. Keys is links to origin of images, values is links to reuploaded images.
+            </summary>
+        </member>
+    </members>
+</doc>

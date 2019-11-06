@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29102.190
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImgExtractor", "ImgExtractor\ImgExtractor.csproj", "{6D5C95D5-588D-4978-913F-667EE048AD31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImgExtractor", "ImgExtractor\ImgExtractor.csproj", "{6D5C95D5-588D-4978-913F-667EE048AD31}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ImgExtractor.Tests", "ImgExtractor.Tests\ImgExtractor.Tests.csproj", "{2D917EAC-F8B7-4099-94B1-335AE329E45F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{6D5C95D5-588D-4978-913F-667EE048AD31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D5C95D5-588D-4978-913F-667EE048AD31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D5C95D5-588D-4978-913F-667EE048AD31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D917EAC-F8B7-4099-94B1-335AE329E45F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D917EAC-F8B7-4099-94B1-335AE329E45F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D917EAC-F8B7-4099-94B1-335AE329E45F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D917EAC-F8B7-4099-94B1-335AE329E45F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
