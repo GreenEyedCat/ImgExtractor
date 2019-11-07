@@ -9,6 +9,8 @@
     <Company></Company>
     <RepositoryUrl>https://github.com/GreenEyedCat/ImgExtractor</RepositoryUrl>
     <PackageProjectUrl>https://github.com/GreenEyedCat/ImgExtractor</PackageProjectUrl>
+    <Description>ImgExtractor is a library that extracts images from html (http links as well as data URIs), save in place you want and replaces links in html.</Description>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(TargetFramework)|$(Platform)'=='Debug|netcoreapp2.0|AnyCPU'">
